@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un client</title>
+</head>
+<body>
+
+<h2>Ajouter un client</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Prédire le cluster
+    </button>
+
+</form>
+
+<br>
+
+<a href="/">Voir les clients</a>
+
+</body>
+</html>

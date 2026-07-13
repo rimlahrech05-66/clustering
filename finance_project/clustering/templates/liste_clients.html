@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des clients</title>
+</head>
+<body>
+
+<h2>Liste des clients</h2>
+
+<a href="/ajouter/">Ajouter un client</a>
+
+<br><br>
+
+<table border="1" cellpadding="8">
+
+<tr>
+    <th>ID</th>
+    <th>Âge</th>
+    <th>Revenu annuel</th>
+    <th>Dette</th>
+    <th>Score crédit</th>
+    <th>Cartes</th>
+    <th>Cluster</th>
+</tr>
+
+{% for client in clients %}
+
+<tr>
+
+<td>{{ client.id }}</td>
+
+<td>{{ client.current_age }}</td>
+
+<td>{{ client.yearly_income }}</td>
+
+<td>{{ client.total_debt }}</td>
+
+<td>{{ client.credit_score }}</td>
+
+<td>{{ client.num_credit_cards }}</td>
+
+<td>{{ client.cluster }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
